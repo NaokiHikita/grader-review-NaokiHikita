@@ -1,4 +1,4 @@
-CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
+CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar'
 
 rm -rf student-submission
 rm -rf grading-area
@@ -12,7 +12,7 @@ if [[ -f student-submission/ListExamples.java ]]
 then
     echo 'Correct File Submitted'
 else
-    echo 'Correc File Not Submitted'
+    echo 'Correct File Not Submitted'
     exit
 fi
 
@@ -26,7 +26,7 @@ then
 fi
 
 cd grading-area
-java -cp ".;../lib/junit-4.13.2.jar;../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples
+java -cp ".:../lib/junit-4.13.2.jar:../lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples
 # Draw a picture/take notes on the directory structure that's set up after
 # getting to this point
 
